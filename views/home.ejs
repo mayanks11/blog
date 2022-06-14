@@ -1,0 +1,20 @@
+<%- include("partials/header") -%>
+<h1>Home</h1>
+
+<p><%=startingContent%></p>
+
+<% post.forEach(function(post){%>
+    <h1><%= post.title %></h1>
+
+    <% if(Object.keys(post.body).length > 100){ %>
+        <p class = "post"><%= post.body.substring(0, 100) %> ... </p>
+    <%}else{%>
+        <p class = "post"><%= post.body %> </p>
+    <%}%>
+    <a class="read-more" href="/post/:<%=post.title%>">Read more</a>
+    
+<%})%>
+
+
+
+<%- include("partials/footer") -%>
