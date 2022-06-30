@@ -1,2 +1,1 @@
-Initial blog website.
-Made using ejs.
+Blog website with mongoDB database.
